@@ -1,0 +1,89 @@
+/* @font-face {
+  font-family: "iconFont";
+  src: url("iconFont.4a5183b3.ttf") format("truetype"),
+    url("iconFont.f6c22c39.woff") format("woff"),
+    url("iconFont.b410c9a1.woff2") format("woff2");
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-variant-numeric: tabular-nums;
+  touch-action: manipulation;
+  font-family: Gilroy, sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: default;
+  height: 100%;
+  line-height: 1.2;
+  user-select: none;
+  width: 100%;
+  background-image: url("./assets/bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  justify-content: center;
+  background-color: #000;
+  user-select: none;
+}
+
+:root {
+  --svg-section-shadow-0: #42e297;
+  --svg-section-shadow-1: #4528fb;
+  --svg-section-gradient-0: "l(0, 0, 1, 1)#42e297-#3cb9b4";
+  --svg-section-gradient-1: "l(0, 0, 1, 1)#4528FB-#9E8EFF";
+  --svg-section-text-color-0: #188375;
+  --svg-section-text-color-1: #ad9fff;
+  --svg-animation-duration: 500;
+  --svg-bg-gradient: "l(0, 0, 1, 1)#353a40-#121416";
+  --svg-bg-border-gradient: "l(1, 1, 0, 0)rgba(103, 79, 253, 0.2)-rgba(65, 216, 159, 0.2)";
+  --svg-bg-border-width: 1;
+  --svg-mid-bg-gradient: "l(0, 0, 1, 1)#32343a-#26292e";
+  --svg-mid-bg-border-gradient: "l(0, 0, 1, 1)rgba(22, 24, 26, 0.5))-rgba(56, 58, 65, 0.5)";
+  --svg-grade-color: #434343;
+  --svg-indicator-gradient: "l(0, 0, 1, 1)#f38481-#fcdf8a";
+  --svg-indicator-border-gradient: "l(0, 0, 1, 1)rgba(179, 179, 179, 0.44)-rgba(0, 0, 0, 0.85)";
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.fin {
+  will-change: transform, fill-opacity;
+  transform-origin: 50%;
+  transform: rotate(932.436deg);
+  fill-opacity: 0;
+}
+.game-container {
+  max-width: 932px;
+  background-color: #16191d;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto; /* Enables vertical scrolling */
+  border-radius: 0.5rem;
+  position: relative;
+  height: calc(100vh - 8px);
+  border: 0.125rem solid #fff;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 667px) {
+  .game-container {
+    max-height: 100%;
+    height: var(--viewport-height, 00vh);
+    border: none;
+    box-shadow: none;
+  }
+}
+

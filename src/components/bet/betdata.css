@@ -1,0 +1,99 @@
+.history-wp {
+  /* padding: 20px 0; */
+  box-shadow: 0 -1px #53596699;
+  height: 1px;
+  margin: 20px 0;
+  /* background-color: red; */
+}
+.cmnbtns-history {
+  padding: 0 18px;
+}
+
+.cmnbtns-history button {
+  border: 1px solid #171a1e;
+  padding: 17px 19px;
+  color: #9b9ea2;
+  font-size: 13px;
+  line-height: 0.85;
+  width: 120px;
+  background-image: linear-gradient(294deg, #17191c, #32383e);
+  box-shadow: -4px -4px 16px #c2c7cc14, 4px 4px 18px #00000080;
+  margin-right: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+
+.cmnbtns-history button:hover {
+  color: #ffffff;
+}
+
+.cmnbtns-history button.active {
+  background-image: linear-gradient(282deg, #2c333a 126%, #1c1e22 0);
+  border: 1px solid #171a1e;
+  box-shadow: inset -2px -2px 10px #ffffff0d, inset 2px 3px 10px #070709;
+  color: #d6e1ef;
+  font-weight: 800;
+}
+
+.cmnbtns-history button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.history_tablescmn {
+  padding-bottom: 5rem;
+}
+.content {
+  background-image: linear-gradient(
+    133deg,
+    hsla(0, 0%, 67%, 0.4) -12%,
+    transparent 54%,
+    rgba(0, 0, 0, 0.4) 123%,
+    rgba(0, 0, 0, 0.4) 0
+  );
+  border-radius: 10px;
+  box-shadow: 11px 13px 30px #02030366, -12px -12px 30px #e8edf30d,
+    inset -16px -6px 80px #f7f8f808;
+  padding: 1px;
+  margin-top: 20px;
+}
+
+.content .tab-content {
+  background-image: linear-gradient(309deg, #121416, #353a40),
+    linear-gradient(
+      131deg,
+      hsla(0, 0%, 67%, 0.4),
+      transparent 50%,
+      rgba(0, 0, 0, 0.4)
+    );
+  border-radius: 10px;
+  width: 100%;
+}
+.content .tab-content .titles {
+  display: flex;
+}
+.content .tab-content .titles__item:first-child {
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.content .tab-content .titles__item {
+  align-items: center;
+  color: #acb5c5;
+  display: flex;
+  flex: 1;
+  font-size: 13px;
+  font-weight: 600;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.separator {
+  border: 1px solid rgba(26, 28, 31, 0.51);
+  box-shadow: 0 -1px 1px #53596699;
+  height: 1px;
+  margin: -5px 0 5px;
+}
