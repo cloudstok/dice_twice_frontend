@@ -13,6 +13,7 @@
   border-radius: 50%;
   box-shadow: 0.1875rem 0.1875rem 0.25rem rgba(10, 9, 9, 0.4);
   padding: 4px;
+  cursor: pointer;
 }
 .game-header-logo {
   background-image: url(../assets/dice-logo.ccf725d6.svg);

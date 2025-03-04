@@ -42,81 +42,16 @@ function SettingModel({
                 </div>
                 <div className="para-text">Rules</div>
               </div>
-              <div className="items-flex" onClick={handleBetLimit}>
+              {/* <div className="items-flex" onClick={handleBetLimit}>
                 <div className="icon-round">
                   <LuHistory className="icon" />
                 </div>
                 <div className="para-text">My bets</div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
-        {/* <div className="sound-container">
-          <div className="sound-content">
-            <div className="items-flex">
-              <div className="icon-round">
-                {volume === 0 ? <GoMute className="icon" /> : <HiSpeakerWave className="icon" />}
-              </div>
-              <div className="para-text">Sound</div>
-            </div>
-            <div className="slider-container">
-              <div className="range-slider">
-                <input
-                  className="range-input"
-                  type="range"
-                  min="0"
-                  max="1"
-                  step="0.1"
-                  value={volume}
-                  onChange={(e) => setVolume(parseFloat(e.target.value))}
-                />
-                <div className="range-input-bg">
-                  <div className="range-bg-inner">
-                    <div className="range-active" style={{ width: `${volume * 100}%` }}></div>
-                  </div>
-                </div>
-                <div
-                  className="range-btn"
-                  style={{ left: `calc(${volume * 100}% - 12px)` }}
-                >
-                  {volume === 0 ? <GoMute className="sound-icon" /> : <HiSpeakerWave className="sound-icon" />}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="sound-content">
-            <div className="items-flex">
-              <div className="icon-round">
-                {musicVolume === 0 ? <TbMusicOff className="icon" /> : <IoMusicalNotesSharp className="icon" />}
-              </div>
-              <div className="para-text">Music</div>
-            </div>
-            <div className="slider-container">
-              <div className="range-slider">
-                <input
-                  className="range-input"
-                  type="range"
-                  min="0"
-                  max="1"
-                  step="0.1"
-                  value={musicVolume}
-                  onChange={(e) => setMusicVolume(parseFloat(e.target.value))}
-                />
-                <div className="range-input-bg">
-                  <div className="range-bg-inner">
-                    <div className="range-active" style={{ width: `${musicVolume * 100}%` }}></div>
-                  </div>
-                </div>
-                <div
-                  className="range-btn"
-                  style={{ left: `calc(${musicVolume * 100}% - 12px)` }}
-                >
-                  {musicVolume === 0 ? <TbMusicOff className="sound-icon" /> : <IoMusicalNotesSharp className="sound-icon" />}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
+
       </div>
     </div>
   );

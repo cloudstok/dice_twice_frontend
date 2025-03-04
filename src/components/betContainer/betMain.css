@@ -78,7 +78,8 @@
 .betinput input {
   /* border: 1px solid #202328; */
   border-radius: 10px;
-  padding: 8px 12px;
+  /* padding: 8px 12px; */
+  margin-top: 8px;
   color: #d6e1ef;
   font-size: 14px;
   font-weight: 700;
@@ -123,6 +124,16 @@ input::-webkit-inner-spin-button {
   cursor: not-allowed;
   pointer-events: none;
 }
+.btn-click-effect {
+  transform: scale(0.9);
+  transition: transform 0.1s ease-in-out;
+}
+
+.btn-active {
+  background-image: linear-gradient(135deg, #1d2024, #292d32) !important;
+  color: white;
+}
+
 .slider-container {
   display: flex;
   align-items: center;
@@ -131,7 +142,7 @@ input::-webkit-inner-spin-button {
 }
 .left-arrow {
   background-image: linear-gradient(316deg, #202428 0%, #2c3136 100%);
-  border-radius: 12px;
+  border-radius: 8px;
   margin-bottom: 0.5rem;
   box-shadow: -4px -2px 16px rgba(195, 200, 205, 0.1),
     4px 4px 18px rgba(15, 14, 14, 0.5);
@@ -181,22 +192,40 @@ input::-webkit-inner-spin-button {
 
 .slider-thumb {
   position: absolute;
-  top: -6px; /* Moves the thumb above the track */
-  width: 18px;
-  height: 18px;
-  background: black; /* Black background */
+  top: -10px; /* Moves the thumb above the track */
+  width: 25px;
+  height: 25px;
+  background: orange;
   border-radius: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 8px solid rgb(60, 58, 58); /* Ensures no white gaps */
+  transform: translateX(-50%);
+}
+
+.slider-value {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  width: 40px;
+  text-align: center;
+  font-size: 700;
 }
 
 /* Orange Inner Circle */
 .thumb-circle {
   width: 10px;
   height: 10px;
-  background: orange; /* Orange color */
+  background: red;
   border-radius: 50%;
 }
 
@@ -290,4 +319,130 @@ input::-webkit-inner-spin-button {
   color: #d6e1ef;
   opacity: 1;
   font-weight: 700;
+}
+
+.range__grade {
+  position: relative;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.range__grade-item {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 14px;
+  width: 0;
+  font-size: 8px;
+  color: #434343;
+}
+
+.range__grade-item:first-child {
+  justify-content: flex-start;
+}
+
+.range__grade-item:last-child {
+  justify-content: flex-end;
+}
+
+.range__grade-item:before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 2px;
+  border-radius: 0.5px;
+  background-color: #434343;
+}
+
+.range__grade-item-text {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.range__grade-item._0 {
+  left: 0;
+}
+
+.range__grade-item._10 {
+  left: 10%;
+}
+
+.range__grade-item._20 {
+  left: 20%;
+}
+
+.range__grade-item._30 {
+  left: 30%;
+}
+
+.range__grade-item._40 {
+  left: 40%;
+}
+
+.range__grade-item._50 {
+  right: 50%;
+}
+
+.range__grade-item._60 {
+  right: 40%;
+}
+
+.range__grade-item._70 {
+  right: 30%;
+}
+
+.range__grade-item._80 {
+  right: 20%;
+}
+
+.range__grade-item._90 {
+  right: 10%;
+}
+
+.range__grade-item._100 {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .bet-main-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 6px;
+  }
+  .bet-panel-main {
+    width: 100%;
+  }
+  .bet-amount-container {
+    width: auto;
+    background: #14181f;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+    margin-left: 10px;
+  }
+
+  .betselect-btns {
+    display: flex;
+    margin-top: 10px;
+    /* background-color: #2dd4bf; */
+    width: 100%;
+    justify-content: space-between;
+  }
+  .slider-container {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 }

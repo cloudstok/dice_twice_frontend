@@ -114,7 +114,29 @@
 .game-history-multi {
   background-image: url("../assets/bg.svg");
   width: 65%;
-  /* padding: 8px; */
-  border-radius: 8px;
-  /* border: 1px solid red; */
+  padding: 4px;
+  border-radius: 6px;
+  /* border: 1px solid; */
+  line-height: 1.5rem;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8),
+    2px 2px 8px rgba(128, 128, 128, 0.6);
+}
+
+@media (max-width: 786px) {
+  .multiplier-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .mode-btn__inner button {
+    /* width: 100%;  */
+    padding: 8px 12px;
+  }
+
+  .game-history-multi {
+    width: 100%; /* Adjusts width for smaller screens */
+    /* padding: 6px; */
+  }
 }

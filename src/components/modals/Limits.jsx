@@ -22,7 +22,7 @@ function Limits({ handleLimits, isClose }) {
               fontWeight: "500",
             }}
           >
-            <BsFillRecord2Fill className="icon" />
+            {/* <BsFillRecord2Fill className="icon" /> */}
             <p>Limits</p>
           </div>
         </div>
@@ -37,10 +37,10 @@ function Limits({ handleLimits, isClose }) {
             <p className="value-para">Max Bet</p>
             <p className="value">20,000.00</p>
           </div>
-          {/* <div className="limit-block">
+          <div className="limit-block">
             <p className="value-para">Max Profit</p>
             <p className="value">2,00,000.00</p>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

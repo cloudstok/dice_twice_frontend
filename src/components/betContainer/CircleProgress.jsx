@@ -2,7 +2,7 @@ import React from 'react';
 import SVGComponent from './SvgPanel';
 import SvgPanel from './SvgPanel';
 
-const CircleProgress = () => {
+const CircleProgress = ({ value }) => {
     return (
         <SVGComponent />
     );

@@ -26,15 +26,15 @@ const Header = ({ info, queryParams }) => {
     setSound((prevSound) => !prevSound);
   };
 
-  const toggleMusic = (e) => {
-    e.stopPropagation();
-    if (music) {
-      pauseBgMusic();
-    } else {
-      playBgMusic();
-    }
-    setMusic((prevMusic) => !prevMusic);
-  };
+  // const toggleMusic = (e) => {
+  //   e.stopPropagation();
+  //   if (music) {
+  //     pauseBgMusic();
+  //   } else {
+  //     playBgMusic();
+  //   }
+  //   setMusic((prevMusic) => !prevMusic);
+  // };
 
   const handleSetting = () => {
     setSettingModal((prev) => !prev);
@@ -45,10 +45,10 @@ const Header = ({ info, queryParams }) => {
     setSettingModal(false);
   };
 
-  const handleBetLimit = () => {
-    setBetModal((prev) => !prev);
-    setSettingModal(false);
-  };
+  // const handleBetLimit = () => {
+  //   setBetModal((prev) => !prev);
+  //   setSettingModal(false);
+  // };
 
   const handleRules = () => {
     setOpenRules((prev) => !prev);
@@ -114,7 +114,7 @@ const Header = ({ info, queryParams }) => {
             </div>
           </div>
 
-          <div className="game-header-button">
+          {/* <div className="game-header-button">
             <div className="game-header__back" onClick={toggleMusic}>
               {music ? (
                 <FaMusic style={{ height: "14px", width: "20px" }} />
@@ -124,7 +124,7 @@ const Header = ({ info, queryParams }) => {
                 />
               )}
             </div>
-          </div>
+          </div> */}
 
           <div className="game-header-button">
             <div className="game-header__back" onClick={handleSetting}>
@@ -137,7 +137,7 @@ const Header = ({ info, queryParams }) => {
                 handleRules={handleRules}
                 handleSetting={handleSetting}
                 handleLimits={handleLimits}
-                handleBetLimit={handleBetLimit}
+              // handleBetLimit={handleBetLimit}
               />
             )}
           </div>
@@ -145,9 +145,9 @@ const Header = ({ info, queryParams }) => {
       </div>
       {openLimits && <Limits handleLimits={handleLimits} />}
       {openRules && <RulesModal handleRules={handleRules} />}
-      {openBetModal && (
+      {/* {openBetModal && (
         <BetLimitModal handleBetLimit={handleBetLimit} info={info} />
-      )}
+      )} */}
     </>
   );
 };

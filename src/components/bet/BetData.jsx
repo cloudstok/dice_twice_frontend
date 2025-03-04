@@ -35,7 +35,7 @@ const BetData = () => {
 
             </div>
 
-            <div className='history-tablescam'>
+            <div className='history-tablescam' style={{ padding: "1rem" }}>
                 <div className='content'>
                     <div className='tab-content'>
                         <div className="titles">
