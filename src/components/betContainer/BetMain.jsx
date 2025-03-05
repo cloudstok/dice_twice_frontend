@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import SVGComponent from './SvgPanel';
 import BetDetails from './BetDetails';
 import MinusPlusCont from './MinusPlusCont';
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const MIN_AMOUNT = 10.00;
 const MAX_AMOUNT = 20000.00;
 
-const BetMain = ({ info, showBalance }) => {
+const BetMain = () => {
     const [amount, setAmount] = useState(MIN_AMOUNT.toFixed(2));
     const [errorInput, setErrorInput] = useState("");
     const [errorInputModal, setErrorInputModal] = useState(false);
@@ -101,22 +102,75 @@ const BetMain = ({ info, showBalance }) => {
                 MAX_AMOUNT={MAX_AMOUNT}
             />
             <div className='circle-progress-main'>
-                <div>
-                    <SVGComponent />
+                <div className='circle-progress-main-mobile'>
+                    <div>
+                        <SVGComponent />
+                    </div>
+                    <div>
+                        <BetDetails
+                            winChance={winChance1}
+                            payout={payout1}
+                            multiplier={multiplier1}
+                            lineGradient="linear-gradient(to right, #00ff7f, #00c853)"
+                        />
+                        <BetDetails
+                            winChance={winChance2}
+                            payout={payout2}
+                            multiplier={multiplier2}
+                            lineGradient="linear-gradient(to right, #00c6ff, #0072ff)"
+                        />
+                    </div>
                 </div>
-                <div>
-                    <BetDetails
-                        winChance={winChance1}
-                        payout={payout1}
-                        multiplier={multiplier1}
-                        lineGradient="linear-gradient(to right, #00ff7f, #00c853)"
-                    />
-                    <BetDetails
-                        winChance={winChance2}
-                        payout={payout2}
-                        multiplier={multiplier2}
-                        lineGradient="linear-gradient(to right, #00c6ff, #0072ff)"
-                    />
+                {/* Slider should appear here on mobile */}
+                <div className="slider-container">
+                    <div className="slider-arrow left-arrow" style={{ marginTop: "2px" }} onClick={() => setValue(Math.max(value - 10, 3))}>
+                        <FaAngleLeft />
+                    </div>
+
+                    <div className="slider-wrapper">
+                        <input
+                            type="range"
+                            min="3"
+                            max="97"
+                            value={value}
+                            onChange={handleChange}
+                            className="slider"
+                        />
+                        <div className="slider-track">
+                            <div className="slider-left" style={{ width: `${((value - 3) / (97 - 3)) * 100}%` }}></div>
+                            <div className="slider-right" style={{ width: `${100 - ((value - 3) / (97 - 3)) * 100}%` }}></div>
+                        </div>
+                        <div className="slider-thumb" style={{ left: `${((value - 3) / (97 - 3)) * 100}%` }}>
+                            {showValue && (
+                                <div className="slider-value">
+                                    {value}
+                                </div>
+                            )}
+                        </div>
+                        <div className="range__grade">
+                            <div className="range__grade-item _0">
+                                <div className="range__grade-item-text">0</div>
+                            </div>
+                            <div className="range__grade-item _10" />
+                            <div className="range__grade-item _20" />
+                            <div className="range__grade-item _30" />
+                            <div className="range__grade-item _40" />
+                            <div className="range__grade-item _50">
+                                <div className="range__grade-item-text">50</div>
+                            </div>
+                            <div className="range__grade-item _60" />
+                            <div className="range__grade-item _70" />
+                            <div className="range__grade-item _80" />
+                            <div className="range__grade-item _90" />
+                            <div className="range__grade-item _100">
+                                <div className="range__grade-item-text">100</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="slider-arrow left-arrow" style={{ marginTop: "2px" }} onClick={() => setValue(Math.min(value + 10, 97))}>
+                        <FaAngleRight />
+                    </div>
                 </div>
             </div>
         </div >

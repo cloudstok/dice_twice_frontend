@@ -7,12 +7,27 @@
 
 .bet-panel-main {
   width: 350px;
+  /* padding: 4px; */
+  /* border: 1px solid red; */
 }
 .circle-progress-main {
   display: flex;
   gap: 3rem;
   width: 650px;
+
   /* background-color: aqua; */
+}
+.circle-progress-main-mobile {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+  width: 650px;
+  /* background-color: aqua; */
+}
+.input-main-container {
+  display: flex;
+  flex-direction: column;
+  /* width: 33%; */
 }
 
 .bet-amount-container {
@@ -154,6 +169,7 @@ input::-webkit-inner-spin-button {
   position: relative;
   width: 300px;
   height: 20px;
+  list-style-type: none;
 }
 
 .slider {
@@ -233,10 +249,11 @@ input::-webkit-inner-spin-button {
   display: flex;
   gap: 20px;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .roll-button {
-  width: 130px;
+  width: 350px;
   padding: 12px;
   font-size: 14px;
   text-align: center;
@@ -421,6 +438,7 @@ input::-webkit-inner-spin-button {
   .bet-panel-main {
     width: 100%;
   }
+
   .bet-amount-container {
     width: auto;
     background: #14181f;
@@ -444,5 +462,75 @@ input::-webkit-inner-spin-button {
     align-items: center;
     display: flex;
     justify-content: center;
+  }
+  .slider-wrapper {
+    display: none; /* Hide it in default position */
+  }
+
+  .circle-progress-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .circle-progress-main-mobile {
+    margin-bottom: -3rem;
+  }
+
+  .circle-progress-main .slider-wrapper {
+    display: block; /* Show inside .circle-progress-main */
+    margin-top: 10px; /* Adjust as needed */
+  }
+
+  .input-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .betcmnclass {
+    width: 100%;
+  }
+
+  .betinput {
+    width: 100%;
+    text-align: center;
+  }
+
+  .betinput input {
+    width: 100%;
+    font-size: 1.2rem;
+    /* padding: 10px; */
+    text-align: center;
+  }
+
+  .betselect-btns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .betselect-btns button {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .betselect-btns .minbtn,
+  .betselect-btns .maxbtn {
+    flex: 1.2;
+  }
+
+  .roll-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .roll-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
